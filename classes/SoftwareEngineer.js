@@ -1,10 +1,5 @@
-class SoftwareEngineer {
-
-
-
-    
-}
+class SoftwareEngineer {}
 
 module.exports = {
-    SoftwareEngineer,
-}
+  SoftwareEngineer,
+};

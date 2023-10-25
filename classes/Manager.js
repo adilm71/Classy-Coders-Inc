@@ -1,10 +1,5 @@
-class Manager {
-
-
-
-    
-}
+class Manager {}
 
 module.exports = {
-    Manager,
-}
+  Manager,
+};

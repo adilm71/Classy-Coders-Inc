@@ -1,10 +1,5 @@
-class SalesPerson {
-
-
-
-    
-}
+class SalesPerson {}
 
 module.exports = {
-    SalesPerson,
-}
+  SalesPerson,
+};
