@@ -26,7 +26,7 @@ describe("Employees tests without static methods", () => {
 })
 
 describe("Manager tests", () => {
-    const preston = new Employees("Preston", "Engineer", 100000);
+    const preston = new Employees("Adil", "Engineer", 100000);
     const jenna = new Manager("Jenna", "Head of Engineers", 120000, "Software Engineering", 10);
 
     test("Can create instance of Manager that is a subclass of Employees", () => {

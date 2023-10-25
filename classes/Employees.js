@@ -6,13 +6,22 @@ class Employees {
     this.#salary = salary;
     this.name = name;
     this.position = position;
-    Employees.#allEmployees.push(this.name);
+    let obj = this;
+    obj['salary'] = this.#salary;
+    Employees.#allEmployees.push(obj);
   }
   getSalary() {
     return this.#salary;
   }
   setSalary(amount) {
     this.#salary = amount;
+
+    for (let i = 0; i < Employees.#allEmployees.length; i ++) {
+      if (this.name == Employees.#allEmployees[i]['name']) {
+        Employees.#allEmployees[i].salary = amount;
+
+      }
+    }
   }
   getStatus() {
     return this.#isHired;
@@ -27,13 +36,13 @@ class Employees {
   static getEmployees() {
     return Employees.#allEmployees;
   }
-  //   static getTotalPayroll() {
-  //     let totalSalary = 0;
-  //     for (let employee of Employees.#allSalaries) {
-  //       totalSalary += employee;
-  //     }
-  //     return Employees.#allSalaries;
-  //   }
+    static getTotalPayroll() {
+      let totalSalary = 0;
+      for (let employee of Employees.#allEmployees) {
+        totalSalary += employee.salary;
+      }
+      return totalSalary//Employees.#allEmployees;
+    }
 }
 
 module.exports = {
